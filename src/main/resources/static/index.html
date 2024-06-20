@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Odontológica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clínica Odontológica - BRIAN & FARYD</h1>
+        
+        <section>
+            <h2>Registrar Paciente</h2>
+            <form id="pacienteForm">
+                <label for="pacienteNombre">Nombre:</label>
+                <input type="text" id="pacienteNombre" required>
+                
+                <label for="pacienteApellido">Apellido:</label>
+                <input type="text" id="pacienteApellido" required>
+                
+                <label for="pacienteDni">DNI:</label>
+                <input type="number" id="pacienteDni" required>
+                
+                <label for="pacienteFechaIngreso">Fecha de Ingreso:</label>
+                <input type="date" id="pacienteFechaIngreso" required>
+                
+                <label for="pacienteCalle">Calle:</label>
+                <input type="text" id="pacienteCalle" required>
+                
+                <label for="pacienteNumero">Número:</label>
+                <input type="number" id="pacienteNumero" required>
+                
+                <label for="pacienteLocalidad">Localidad:</label>
+                <input type="text" id="pacienteLocalidad" required>
+                
+                <label for="pacienteProvincia">Provincia:</label>
+                <input type="text" id="pacienteProvincia" required>
+                
+                <button type="submit">Registrar Paciente</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Registrar Odontólogo</h2>
+            <form id="odontologoForm">
+                <label for="odontologoMatricula">Matrícula:</label>
+                <input type="text" id="odontologoMatricula" required>
+                
+                <label for="odontologoNombre">Nombre:</label>
+                <input type="text" id="odontologoNombre" required>
+                
+                <label for="odontologoApellido">Apellido:</label>
+                <input type="text" id="odontologoApellido" required>
+                
+                <button type="submit">Registrar Odontólogo</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Registrar Turno</h2>
+            <form id="turnoForm">
+                <label for="turnoFechaYHora">Fecha y Hora:</label>
+                <input type="datetime-local" id="turnoFechaYHora" required>
+                
+                <label for="turnoOdontologoId">ID del Odontólogo:</label>
+                <input type="number" id="turnoOdontologoId" required>
+                
+                <label for="turnoPacienteId">ID del Paciente:</label>
+                <input type="number" id="turnoPacienteId" required>
+                
+                <button type="submit">Registrar Turno</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Buscar Paciente por ID</h2>
+            <form id="buscarPacienteForm">
+                <label for="buscarPacienteId">ID del Paciente:</label>
+                <input type="number" id="buscarPacienteId" required>
+                <button type="submit">Buscar Paciente</button>
+            </form>
+            <div id="buscarPacienteResultado"></div>
+        </section>
+
+        <section>
+            <h2>Buscar Odontólogo por ID</h2>
+            <form id="buscarOdontologoForm">
+                <label for="buscarOdontologoId">ID del Odontólogo:</label>
+                <input type="number" id="buscarOdontologoId" required>
+                <button type="submit">Buscar Odontólogo</button>
+            </form>
+            <div id="buscarOdontologoResultado"></div>
+        </section>
+
+        <section>
+            <h2>Buscar Turno por ID</h2>
+            <form id="buscarTurnoForm">
+                <label for="buscarTurnoId">ID del Turno:</label>
+                <input type="number" id="buscarTurnoId" required>
+                <button type="submit">Buscar Turno</button>
+            </form>
+            <div id="buscarTurnoResultado"></div>
+        </section>
+
+        <section>
+            <h2>Listar Pacientes</h2>
+            <button id="listarPacientesBtn">Listar Pacientes</button>
+            <div id="listarPacientesResultado"></div>
+        </section>
+
+        <section>
+            <h2>Listar Odontólogos</h2>
+            <button id="listarOdontologosBtn">Listar Odontólogos</button>
+            <div id="listarOdontologosResultado"></div>
+        </section>
+
+        <section>
+            <h2>Listar Turnos</h2>
+            <button id="listarTurnosBtn">Listar Turnos</button>
+            <div id="listarTurnosResultado"></div>
+        </section>
+
+        <section>
+            <h2>Actualizar Paciente</h2>
+            <form id="actualizarPacienteForm">
+                <label for="actualizarPacienteId">ID del Paciente:</label>
+                <input type="number" id="actualizarPacienteId" required>
+                <!-- Los demás campos del formulario del paciente se pueden reutilizar -->
+                <label for="actualizarPacienteNombre">Nombre:</label>
+                <input type="text" id="actualizarPacienteNombre" required>
+                
+                <label for="actualizarPacienteApellido">Apellido:</label>
+                <input type="text" id="actualizarPacienteApellido" required>
+                
+                <label for="actualizarPacienteDni">DNI:</label>
+                <input type="number" id="actualizarPacienteDni" required>
+                
+                <label for="actualizarPacienteFechaIngreso">Fecha de Ingreso:</label>
+                <input type="date" id="actualizarPacienteFechaIngreso" required>
+                
+                <label for="actualizarPacienteCalle">Calle:</label>
+                <input type="text" id="actualizarPacienteCalle" required>
+                
+                <label for="actualizarPacienteNumero">Número:</label>
+                <input type="number" id="actualizarPacienteNumero" required>
+                
+                <label for="actualizarPacienteLocalidad">Localidad:</label>
+                <input type="text" id="actualizarPacienteLocalidad" required>
+                
+                <label for="actualizarPacienteProvincia">Provincia:</label>
+                <input type="text" id="actualizarPacienteProvincia" required>
+                
+                <button type="submit">Actualizar Paciente</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Actualizar Odontólogo</h2>
+            <form id="actualizarOdontologoForm">
+                <label for="actualizarOdontologoId">ID del Odontólogo:</label>
+                <input type="number" id="actualizarOdontologoId" required>
+                <!-- Los demás campos del formulario del odontólogo se pueden reutilizar -->
+                <label for="actualizarOdontologoMatricula">Matrícula:</label>
+                <input type="text" id="actualizarOdontologoMatricula" required>
+                
+                <label for="actualizarOdontologoNombre">Nombre:</label>
+                <input type="text" id="actualizarOdontologoNombre" required>
+                
+                <label for="actualizarOdontologoApellido">Apellido:</label>
+                <input type="text" id="actualizarOdontologoApellido" required>
+                
+                <button type="submit">Actualizar Odontólogo</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Actualizar Turno</h2>
+            <form id="actualizarTurnoForm">
+                <label for="actualizarTurnoId">ID del Turno:</label>
+                <input type="number" id="actualizarTurnoId" required>
+                <!-- Los demás campos del formulario del turno se pueden reutilizar -->
+                <label for="actualizarTurnoFechaYHora">Fecha y Hora:</label>
+                <input type="datetime-local" id="actualizarTurnoFechaYHora" required>
+                
+                <label for="actualizarTurnoOdontologoId">ID del Odontólogo:</label>
+                <input type="number" id="actualizarTurnoOdontologoId" required>
+                
+                <label for="actualizarTurnoPacienteId">ID del Paciente:</label>
+                <input type="number" id="actualizarTurnoPacienteId" required>
+                
+                <button type="submit">Actualizar Turno</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Eliminar Paciente</h2>
+            <form id="eliminarPacienteForm">
+                <label for="eliminarPacienteId">ID del Paciente:</label>
+                <input type="number" id="eliminarPacienteId" required>
+                <button type="submit">Eliminar Paciente</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Eliminar Odontólogo</h2>
+            <form id="eliminarOdontologoForm">
+                <label for="eliminarOdontologoId">ID del Odontólogo:</label>
+                <input type="number" id="eliminarOdontologoId" required>
+                <button type="submit">Eliminar Odontólogo</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Eliminar Turno</h2>
+            <form id="eliminarTurnoForm">
+                <label for="eliminarTurnoId">ID del Turno:</label>
+                <input type="number" id="eliminarTurnoId" required>
+                <button type="submit">Eliminar Turno</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
