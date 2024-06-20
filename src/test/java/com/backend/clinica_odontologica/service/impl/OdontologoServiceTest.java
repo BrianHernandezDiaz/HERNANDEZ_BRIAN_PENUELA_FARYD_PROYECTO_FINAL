@@ -82,8 +82,8 @@ public class OdontologoServiceTest {
 
     @Test
     public void actualizarOdontologoTest() {
-        OdontologoEntradaDto entradaDto = new OdontologoEntradaDto("12344", "Juan", "Pérez");
-        Odontologo odontologo = new Odontologo(1L, "12344", "Juan", "Pérez");
+        OdontologoEntradaDto entradaDto = new OdontologoEntradaDto("12345", "Juan", "Pérez");
+        Odontologo odontologo = new Odontologo(1L, "12345", "Juan", "Pérez");
         when(odontologoRepository.findById(1L)).thenReturn(Optional.of(odontologo));
         when(odontologoRepository.save(any(Odontologo.class))).thenReturn(odontologo);
 
